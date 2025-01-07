@@ -15,15 +15,10 @@ set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
-# 设置 PATH 环境变量
 set(ENV{PATH} "$ENV{PATH};${CMAKE_CURRENT_SOURCE_DIR}/picotool")
 set(ENV{PICO_SDK_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/pico-sdk")
 
-# 设置默认值
 set(PICO_PLATFORM "rp2350" CACHE STRING "Target platform for the Pico project")
-
-# 打印变量以确保正确
-message(STATUS "PICO_PLATFORM: ${PICO_PLATFORM}")
 
 include("$ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake")
 
